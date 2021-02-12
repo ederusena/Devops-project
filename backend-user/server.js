@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const cors = require('cors');
 
 const user = require("./routes/api/user");
 const profile = require("./routes/api/profile");
@@ -15,6 +16,7 @@ morgan.token('id', function getId (req) {
 })
 
 const app = express();
+app.use(cors());
 
 app.use(assignId);
 app.use(
