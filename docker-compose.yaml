@@ -1,0 +1,15 @@
+version: '3'
+services:
+  scm:
+    image: "ederusena/backend-scm:alpha"
+    ports:
+      - "3030:3030"
+  user:
+    image: "ederusena/backend-user:alpha"
+    ports:
+      - "3020:3020"
+  frontend:
+    image: "ederusena/frontend:alpha"
+    ports:
+      - "80:80"
+# docker-compose up -d
